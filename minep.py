@@ -2,7 +2,6 @@
 #!-*-coding:utf-8-*-
 
 import pyperclip
-import os
 
 # Transferindo do clipboard o que foi copiado para um arquivo
 
