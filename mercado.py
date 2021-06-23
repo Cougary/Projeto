@@ -4,10 +4,12 @@
 import requests, bs4
 
 req = requests.get("https://www.mercadolivre.com.br/")
-print(req.raise_for_status)
-arquivo = open("mercado_livre.txt", "w")
-arquivo.write(req.text)
-arquivo.close()
+try:
+	req.raise_for_status()
+except:
+	arquivo = open("mercado_livre.txt", "w")
+	arquivo.write(req.text)
+	arquivo.close()
 
 def extrai_dados():
 	sopa = open('mercado_livre.txt')
