@@ -11,7 +11,7 @@ arquivo.close()
 
 def extrai_dados():
 	sopa = open('mercado_livre.txt')
-	soup = bs4.BeautifulSoup(sopa)
+	soup = bs4.BeautifulSoup(sopa, features="lxml")
 	filtra_nome = soup.select('.ui-item__title')
 	filtra_preco = soup.select('.price-tag-fraction')
 	for i in range(5):
