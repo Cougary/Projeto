@@ -36,3 +36,4 @@ for i in range(50):
 
 
 
+# TODO: Salvar os nomes e preços dos produtos em um arquivo CSV ou .xlsx
