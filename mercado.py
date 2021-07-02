@@ -16,7 +16,7 @@ def extrai_dados():
 	soup = bs4.BeautifulSoup(sopa, features="lxml")
 	filtra_nome = soup.select('.ui-item__title')
 	filtra_preco = soup.select('.price-tag-fraction')
-	for i in range(5):
+	for i in range(len(filtra_nome)):
 		print("Produto: " + str(filtra_nome[i].getText()) + " Preço: " + str(filtra_preco[i].getText()))
 
 # Chama a função anteriormente definida
