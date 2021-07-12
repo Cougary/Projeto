@@ -13,7 +13,7 @@ arquivo.close()
 # Função que extrai e filtra os dados do arquivo baixados para retornar os nomes e preços dos produtos encontrados
 def extrai_dados():
 	sopa = open('mercado_livre.txt')
-	soup = bs4.BeautifulSoup(sopa, features="lxml")
+	soup = bs4.BeautifulSoup(sopa.read(), features="lxml")
 	filtra_nome = soup.select('.ui-item__title')
 	filtra_preco = soup.select('.price-tag-fraction')
 	for i in range(len(filtra_nome)):
