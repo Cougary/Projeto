@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #!-*-coding:utf-8-*-
 
-import time, sys
+import time, sys, cProfile
 
 lista = []
 
@@ -23,4 +23,5 @@ amostra()
 final = time.time()
 sub = inicio - final
 print("Tempo de execução da função: " + str(sub))
+print("Tempo de execução da função: " + str(cProfile.run("amostra()")))
         
